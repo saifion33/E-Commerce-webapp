@@ -1,10 +1,17 @@
-
-
+import { Route, BrowserRouter, Routes } from "react-router-dom"
+import ErrorPage from "./error/ErrorPage"
+import Cart from "./pages/Cart"
+import Home from "./pages/Home"
+import Product from "./pages/Product"
 function App() {
   return (
-    <div className="App text-red-600">
-      This is a simple React,Tailwindcss app with vite js.
-    </div>
+    <BrowserRouter>
+      <Routes >
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/cart" element={<Cart />} />
+        <Route exact path="/product" element={<Product />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
