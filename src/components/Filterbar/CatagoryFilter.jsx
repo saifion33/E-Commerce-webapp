@@ -2,12 +2,12 @@ import React, { useState } from 'react'
 import expandArrow from '../../assets/icons/expand-arrow.png';
 import collapseArrow from '../../assets/icons/collapse-arrow.png';
 
-const CatagoryFilter = ({ catagoryFilterHandler }) => {
+const CatagoryFilter = ({ catagoryFilterHandler, getData }) => {
 
     const [isOpen, setIsOpen] = useState(false);
     const [selectedOption, setSelectedOption] = useState('All');
 
-    const options = ["smartphones", "laptops", "fragrances", "skincare", "groceries", "home-decoration", "furniture", "tops", "womens-dresses", "womens-shoes", "mens-shirts", "mens-shoes", "mens-watches", "womens-watches", "womens-bags", "womens-jewellery", "sunglasses", "automotive", "motorcycle", "lighting"]
+    const options = ["All", "smartphones", "laptops", "fragrances", "skincare", "groceries", "home-decoration", "furniture", "tops", "womens-dresses", "womens-shoes", "mens-shirts", "mens-shoes", "mens-watches", "womens-watches", "womens-bags", "womens-jewellery", "sunglasses", "automotive", "motorcycle", "lighting"]
 
     const toggleDropdown = () => {
         setIsOpen(!isOpen);
@@ -16,7 +16,12 @@ const CatagoryFilter = ({ catagoryFilterHandler }) => {
     const handleOptionClick = (option) => {
         setSelectedOption(option);
         setIsOpen(false);
-        catagoryFilterHandler(option);
+        if (option !== 'All') {
+            catagoryFilterHandler(option);
+        }
+        else {
+            getData()
+        }
     }
 
     return (

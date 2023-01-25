@@ -1,10 +1,10 @@
 import React from 'react'
 import CatagoryFilter from './CatagoryFilter'
 
-const Filterbar = ({ catagoryFilterHandler }) => {
+const Filterbar = ({ catagoryFilterHandler, getData }) => {
     return (
         <div className=''>
-            <CatagoryFilter catagoryFilterHandler={catagoryFilterHandler} />
+            <CatagoryFilter catagoryFilterHandler={catagoryFilterHandler} getData={getData} />
         </div>
     )
 }

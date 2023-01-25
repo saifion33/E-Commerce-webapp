@@ -21,7 +21,7 @@ const Home = () => {
 
     return (
         <div className='bg-slate-900 min-h-screen'>
-            <Headbar searchProduct={searchProduct} catagoryFilterHandler={catagoryFilterHandler} />
+            <Headbar searchProduct={searchProduct} catagoryFilterHandler={catagoryFilterHandler} getData={getData} />
             {
                 isLoading && <div className='bg-slate-900 h-screen flex  justify-center items-center text-amber-400 text-3xl font-bold'>Loading...</div>
             }
