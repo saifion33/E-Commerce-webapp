@@ -12,13 +12,16 @@ const Home = () => {
     const getData = async () => {
         fetchData('/products/?limit=10').then(data => { setResult(data); setisLoading(false) })
     }
+    const catagoryFilterHandler = async (category) => {
+        fetchData(`/products/category/${category}`).then(data => { setResult(data); setisLoading(false) })
+    }
     useEffect(() => {
         getData()
     }, [])
 
     return (
         <div className='bg-slate-900 min-h-screen'>
-            <Headbar searchProduct={searchProduct} />
+            <Headbar searchProduct={searchProduct} catagoryFilterHandler={catagoryFilterHandler} />
             {
                 isLoading && <div className='bg-slate-900 h-screen flex  justify-center items-center text-amber-400 text-3xl font-bold'>Loading...</div>
             }
