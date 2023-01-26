@@ -3,7 +3,7 @@ import expandArrow from '../../assets/icons/expand-arrow.png';
 import collapseArrow from '../../assets/icons/collapse-arrow.png';
 
 
-const BrandFilter = ({ brands, selectedCategory, catagoryFilterHandler, brandFilterHandler }) => {
+const BrandFilter = ({ brands, brandFilterHandler }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [selectedOption, setSelectedOption] = useState('All');
 

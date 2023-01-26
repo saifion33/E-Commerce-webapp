@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import expandArrow from '../../assets/icons/expand-arrow.png';
 import collapseArrow from '../../assets/icons/collapse-arrow.png';
 
-const CatagoryFilter = ({ catagoryFilterHandler, getData, categories }) => {
+const CatagoryFilter = ({ catagoryFilterHandler, categories }) => {
 
     const [isOpen, setIsOpen] = useState(false);
     const [selectedOption, setSelectedOption] = useState('All');
