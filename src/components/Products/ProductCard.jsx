@@ -1,11 +1,14 @@
 import React, { useState } from 'react'
 import starIcon from '../../assets/icons/starIcon.png'
+import { useSelector, useDispatch } from 'react-redux'
+import { addProductToCart } from '../../features/cartSlice'
 
 const ProductCard = ({ product }) => {
     const [productCount, setProductCount] = useState(1)
     const onChangeHandler = (e) => {
         setProductCount(e.target.value)
     }
+    const dispatch = useDispatch()
     return (
         <div className='product-card w-full max-w-xs flex flex-col bg-slate-700 p-3 rounded-md'>
             <input className='w-5 h-5 ml-auto mb-2' type="checkbox" name="add-item" id="add-item-check" />
@@ -27,7 +30,7 @@ const ProductCard = ({ product }) => {
                 <div className='flex justify-between items-center'>
                     <p className='text-amber-400'>${product.price}</p>
                     <div>
-                        <button type='button' className='bg-amber-400 text-slate-900 font-bold px-3 py-1 rounded'>Add to Cart</button>
+                        <button type='button' onClick={() => { dispatch(addProductToCart(product)) }} className='bg-amber-400 text-slate-900 font-bold px-3 py-1 rounded'>Add to Cart</button>
                     </div>
                 </div>
             </div>

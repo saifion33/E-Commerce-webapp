@@ -3,7 +3,7 @@ import CartGrid from '../components/Cart/CartGrid'
 import CartHeader from '../components/Cart/CartHeader'
 import CartPaymentSection from '../components/Cart/CartPaymentSection'
 
-const Cart = () => {
+const Cart = ({cart}) => {
     return (
         <div className='flex flex-col lg:flex-row'>
             <div className='h-screen lg:w-3/4'>
@@ -11,7 +11,7 @@ const Cart = () => {
                 <CartGrid />
             </div>
             <div className='sticky lg:static bottom-0 left-0  lg:w-3/12'>
-                <CartPaymentSection />
+                <CartPaymentSection cart={cart} />
             </div>
         </div>
     )
