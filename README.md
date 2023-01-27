@@ -14,10 +14,10 @@ This is an assignment project. This webapp use dummyjson api for products
 
 
  **Cart Page**
-![Cart Page](https://raw.githubusercontent.com/saifion33/E-Commerce-webapp/master/public/screenshots/Screenshot%202023-01-27%20at%2018-29-42%20Vite%20Commerce.png?token=GHSAT0AAAAAAB4KF3O2HNDQDPOO6GXQPX5CY6TZXLQ)
+![Cart Page](https://raw.githubusercontent.com/saifion33/E-Commerce-webapp/master/public/screenshots/Screenshot%202023-01-27%20at%2018-29-42%20Vite%20Commerce.png?token=GHSAT0AAAAAAB4KF3O2ULS2IPTMBNZLWZMQY6TZ3TQ)
 
  **Thanks Page**
-![Thanks Page](https://raw.githubusercontent.com/saifion33/E-Commerce-webapp/master/public/screenshots/Screenshot%202023-01-27%20at%2018-29-52%20Vite%20Commerce.png?token=GHSAT0AAAAAAB4KF3O2HNDQDPOO6GXQPX5CY6TZXLQ)
+![Thanks Page](https://raw.githubusercontent.com/saifion33/E-Commerce-webapp/master/public/screenshots/Screenshot%202023-01-27%20at%2018-29-52%20Vite%20Commerce.png?token=GHSAT0AAAAAAB4KF3O3MVU46ENC355MLYOMY6TZ32A)
 
 
 
