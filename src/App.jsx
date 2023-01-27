@@ -1,13 +1,16 @@
 
 import { Outlet } from "react-router-dom"
-import Cart from "./pages/Cart"
-import Home from "./pages/Home"
-import Product from "./pages/Product"
+import AlertBar from "./components/Alert/Alertbar"
+
 function App() {
 
 
   return (
-    <Outlet />
+    <div className="min-h-screen bg-slate-900 relative">
+
+      <AlertBar />
+      <Outlet />
+    </div>
   )
 }
 

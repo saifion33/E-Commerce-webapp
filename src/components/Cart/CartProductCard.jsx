@@ -4,6 +4,7 @@ import plusIcon from '../../assets/icons/plus-icon.png'
 import minusIcon from '../../assets/icons/minus-icon.png'
 import { useDispatch } from 'react-redux'
 import { decreaseProductQuantityByOne, increaseProductQuantityByOne, removeProductFromCart } from '../../features/cartSlice'
+import { showAlert } from '../../features/alertSlice'
 
 
 const CartProductCard = ({ product }) => {
@@ -11,7 +12,7 @@ const CartProductCard = ({ product }) => {
     return (
         <div className=' flex flex-col gap-3 md:flex-row p-3 items-center justify-between  text-amber-400 border-b-2 border-amber-400'>
             <div className='flex items-center'>
-                <img className='w-5 h-5 mx-2 cursor-pointer' onClick={() => { dispatch(removeProductFromCart(product.id)) }} src={closeIcon} alt="close" />
+                <img className='w-5 h-5 mx-2 cursor-pointer' onClick={() => { dispatch(removeProductFromCart(product.id)); dispatch(showAlert({ type: 'danger', message: 'Product Removed from cart' })) }} src={closeIcon} alt="close" />
                 <div>
                     <img className='w-32' src={product.thumbnail} alt={product.title} />
                 </div>

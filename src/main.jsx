@@ -11,6 +11,7 @@ import {
 import Home from './pages/Home'
 import Cart from './pages/Cart'
 import ErrorPage from './error/ErrorPage'
+import Thanks from './pages/Thanks'
 const router = createBrowserRouter([
   {
     path: "/",
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: "/cart",
         element: <Cart />
+      },
+      {
+        path: "/thanks",
+        element: <Thanks />
       }
     ]
   },
